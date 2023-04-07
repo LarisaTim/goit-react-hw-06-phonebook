@@ -1,6 +1,5 @@
 import React from "react";
-import { useSelector,useDispatch } from "react-redux";
-// import PropTypes from "prop-types";
+import { useSelector, useDispatch } from "react-redux";
 import  actions from '../../redux/contact/contact-actions';
 import {
   filterContacts
@@ -31,15 +30,6 @@ const ListContacts = () => {
 };
 
 
-// ListContacts.propTypes = {
-//   listContacts: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       number: PropTypes.string.isRequired,
-//     })
-//   ),
- 
-// };
+
 
  export default ListContacts;
