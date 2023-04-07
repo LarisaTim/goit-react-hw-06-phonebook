@@ -1,4 +1,3 @@
- import PropTypes from "prop-types";
 import s from "./ContactItem.module.css";
 
 function ContactItem({ id, name, number,onDeleteContact }) {
@@ -19,10 +18,6 @@ function ContactItem({ id, name, number,onDeleteContact }) {
   );
 }
 
-ContactItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
-  
-};
+
 
 export default ContactItem;

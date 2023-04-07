@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   getContacts
 } from '../../redux/contact/contact-selector';
-import  actions from '../../redux/contact/contact-actions';
+import { addContact } from '../../redux/contact/contact-actions';
 import s from "./Form.module.css";
 
 export default function Form() {
@@ -19,7 +19,7 @@ export default function Form() {
     if (contacts.filter((el) => el.name === name).length !== 0) {
       alert(`Contacts ${name} already exist`)
     } else {
-      dispatch(actions.addContact(contact))
+      dispatch(addContact(contact))
     }
     setName("");
     setNumber("");

@@ -1,6 +1,5 @@
-// import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
-import actions from './contact-actions';
+import { addContact, deleteContact, setFilter } from './contact-actions';
 import { current } from 'immer';
 
 const contacts = { items: [], filter: '' };
@@ -8,7 +7,7 @@ const contacts = { items: [], filter: '' };
 export const contactsReducer = createReducer(
   { contacts },
   {
-    [actions.addContact]: (state, { payload }) => {
+    [addContact]: (state, { payload }) => {
       const currentState = current(state);
       return {
         contacts: {
@@ -17,7 +16,7 @@ export const contactsReducer = createReducer(
         },
       };
     },
-    [actions.deleteContact]: (state, { payload }) => {
+    [deleteContact]: (state, { payload }) => {
       const currentState = current(state);
       return {
         contacts: {
@@ -28,7 +27,7 @@ export const contactsReducer = createReducer(
         },
       };
     },
-    [actions.setFilter]: (state, { payload }) => {
+    [setFilter]: (state, { payload }) => {
       const currentState = current(state);
       return {
         contacts: {
@@ -37,5 +36,5 @@ export const contactsReducer = createReducer(
         },
       };
     },
-  },
+  }
 );
